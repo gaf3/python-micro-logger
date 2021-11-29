@@ -47,7 +47,7 @@ Everyting is done through Docker. No python code is executed locally.
 
 - `make build` - Build a local image to use (do this first)
 - `make test` - Run tests
-- `make debug` - Run tests with step through debugging. Will pause until the 'logging' debugger is started.
+- `make debug` - Run tests with step through debugging. Will pause until the 'micro-logger' debugger is started.
 - `make lint`- Run the linter (uses test/.pylintc)
 - `make setup` - Verifies this repo can be installed as a Python package
 - `make tag` - Tags this commit with the version in Makefile

@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "relations",
+            "name": "micro-logger",
             "type": "python",
             "request": "attach",
             "port": 5678,
