@@ -8,12 +8,12 @@ import logging
 import pythonjsonlogger.jsonlogger
 
 
-def getLogger(name):
+def getLogger(name, level="WARNING", root_level=True):
     """
     Gets the logger with a name and sets for all
     """
 
-    level = os.environ.get("LOG_LEVEL", "WARNING")
+    level = os.environ.get("LOG_LEVEL", level)
 
     handler = logging.StreamHandler()
     handler.setFormatter(pythonjsonlogger.jsonlogger.JsonFormatter(
@@ -24,7 +24,9 @@ def getLogger(name):
     root = logging.getLogger()
     root.handlers = []
     root.addHandler(handler)
-    root.setLevel(level)
+
+    if root_level:
+        root.setLevel(level)
 
     custom = logging.getLogger(name)
     custom.setLevel(level)
