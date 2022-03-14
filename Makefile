@@ -1,7 +1,7 @@
 ACCOUNT=gaf3
 IMAGE=python-micro-logger
 INSTALL=python:3.8.5-alpine3.12
-VERSION?=0.1.0
+VERSION?=0.1.1
 DEBUG_PORT=5678
 TTY=$(shell if tty -s; then echo "-it"; fi)
 VOLUMES=-v ${PWD}/lib:/opt/service/lib \
